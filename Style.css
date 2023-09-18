@@ -1,0 +1,611 @@
+﻿
+
+body { margin:0; padding:0; width:100%; color:#5f5f5f; font:normal 12px/1.8em Arial, Helvetica, sans-serif;}
+html, .main { padding:0; margin:0;}
+.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+h1 { margin:0; padding:32px 0 0; color:#fff; font:normal 40px/1.2em Arial, Helvetica, sans-serif; text-align:center;}
+h1 a, h1 a:hover { color:#fff; text-decoration:none;}
+h1 small { font:normal 16px/1.2em Arial, Helvetica, sans-serif;}
+h2 { font:normal 24px Arial, Helvetica, sans-serif; color:#4b4b4b; padding:8px 0; margin:8px 0;}
+p { margin:8px 0; padding:0 0 8px 0; font:normal 12px/1.8em Arial, Helvetica, sans-serif;}
+a { color:#00b2e8; text-decoration:underline;}
+
+.header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar { margin:0; padding:0;}
+.content_resize, .fbg_resize, .footer_resize { margin:0 auto; padding:0 40px; width:890px;}
+
+/* header */
+.header { background:url(images/header_bg.jpg) repeat-x center top;}
+.header_resize { background-image:url(images/logo.jpg) margin:0 auto; padding:0; width:970px; height:337px;}
+.header .logo { padding:61px 0 0 318px; float:left; width:auto; }
+
+/* menu */
+
+#menu {
+    position:relative;
+    height:32px;
+}
+#menu .menu { position:absolute; }
+#menu * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+}
+#menu a {
+    display:block;
+    padding-left:13px;
+}
+#menu a span {
+    display:block;
+    padding:6px 14px 10px 2px;
+    white-space:nowrap;
+}
+#menu li {
+    float:left;
+    background:url(images/pix.gif);
+}
+#menu li li { float:none; }
+#menu div {
+    display:none;
+    position:absolute;
+    background:url(images/pix.gif);
+    margin-top:-5px;
+    width:200px;
+}
+#menu div ul { position:relative; }
+#menu div div {
+    margin:-50px 0 0 -6px;
+    left:100%;
+}
+#menu li:hover>div { display:block; }
+
+/** ie7 */
+*:first-child+html #menu div div { display:block; top:-9999px; }
+*:first-child+html #menu li:hover>div { top:auto; }
+
+#menu div.columns { width:200px; }
+#menu div.columns ul {
+    float:left;
+    width:200px;
+    position:static;
+}
+#menu div.columns a { white-space:normal; }
+#menu div.two { width:400px; }
+#menu div.two ul.one div { margin-left:-206px; }
+#menu div.two ul.two div { margin-left:-6px; }
+#menu div.three { width:600px; }
+#menu div.three ul.one div { margin-left:-406px; }
+#menu div.three ul.two div { margin-left:-206px; }
+#menu div.three ul.three div { margin-left:-6px; }
+#menu div.four { width:800px; }
+#menu div.four ul.one div { margin-left:-606px; }
+#menu div.four ul.two div { margin-left:-406px; }
+#menu div.four ul.three div { margin-left:-206px; }
+#menu div.four ul.four div { margin-left:-6px; }
+#menu div.five { width:1000px; }
+#menu div.five ul.one div { margin-left:-806px; }
+#menu div.five ul.two div { margin-left:-606px; }
+#menu div.five ul.three div { margin-left:-406px; }
+#menu div.five ul.four div { margin-left:-206px; }
+#menu div.five ul.five div { margin-left:-6px; }
+
+#menu a, #menu a span {
+    font-family:'Trebuchet MS', Tahoma, Arial;
+    font-size:16px;
+    line-height:24px;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:normal;
+}
+#menu a {
+    text-shadow:#222 -1px -1px 0;
+    background:url(images/item.png) no-repeat left -274px;
+}
+#menu a span { background:url(images/item.png) no-repeat right -4px; }
+#menu li.current>a { background-position:left -319px; }
+#menu li.current>a span { background-position:right -94px; }
+#menu a.parent span {
+    background-position:right -49px;
+    padding-right:40px;
+}
+#menu li.current>a.parent span { background-position:right -139px; }
+#menu>ul>li:hover>a, #menu a:hover { background-position:left -364px; }
+#menu>ul>li:hover>a span, #menu a:hover span { background-position:right -184px; }
+#menu>ul>li:hover>a.parent span, #menu a.parent:hover span {
+    background-position:right -229px;
+}
+
+#menu div a {
+    margin-left:4px;
+    padding:4px 0 0 0;
+    width:192px;
+    background:url(images/subitem.png) no-repeat 0 top;
+}
+#menu div a span {
+    text-transform:none;
+    font-size:14px;
+    background:url(images/subitem.png) no-repeat -384px bottom;
+    padding-top:3px;
+    padding-left:11px;
+    white-space:normal;
+}
+#menu div a:hover,
+#menu div ul>li:hover>a.parent, #menu div ul li a.parent:hover {
+    background-color:rgb(25,95,106);
+    background-position:-192px top;
+}
+#menu div a:hover span { background-position:-768px bottom; }
+#menu div a.parent span { background-position:-576px bottom; }
+#menu div ul>li:hover>a.parent span, #menu div ul li a.parent:hover span { background-position:-960px bottom; }
+
+#menu div {
+    background:url(images/columns.png) no-repeat -200px top;
+    padding-top:14px;
+}
+#menu div ul {
+    width:200px;
+    background:url(images/columns.png) no-repeat 0 bottom;
+    padding-bottom:17px;
+}
+
+#menu div.columns {
+    padding-top:0;
+    margin-top:9px;
+}
+#menu div div.columns { margin-top:-36px; }
+#menu div.columns>ul {
+    padding-top:14px;
+    margin-top:-14px;
+}
+#menu div.two { background-position:-1000px bottom; }
+#menu div.three { background-position:-1400px bottom; }
+#menu div.four { background-position:-2000px bottom; }
+#menu div.five { background-position:-2800px bottom; }
+#menu div.columns ul.two,
+#menu div.columns ul.three, 
+#menu div.columns ul.four,
+#menu div.columns ul.five { background-position:-550px top; }
+#menu div.columns ul.one { background-position:-400px top; }
+#menu div.two ul.two,
+#menu div.three ul.three,
+#menu div.four ul.four,
+#menu div.five ul.five { background-position:-800px top; }
+
+#menu div.columns>ul>li>a {
+    margin-left:0;
+    width:200px;
+}
+#menu div.columns>ul.one>li>a {
+    margin-left:4px;
+    width:196px;
+}
+#menu div.two>ul.two>li>a,
+#menu div.three>ul.three>li>a,
+#menu div.four>ul.four>li>a,
+#menu div.five>ul.five>li>a {
+    width:196px;
+}
+
+#menu.active a {
+    z-index:780;
+    position:relative;
+}
+#menu.active li { z-index:778; }
+#menu.active div div { z-index:781; }
+#menu.active div a { position:static; }
+
+#menu.active li.back {
+    background:url(images/item.png) no-repeat left -319px;
+    height:40px;
+    position:absolute;
+    padding:0;
+    margin:0;
+}
+#menu.active li.back .left {
+    display:block;
+    padding:0;
+    width:auto;
+    background:url(images/item.png) no-repeat right -94px;
+    height:40px;
+    margin:0 5px 0 8px;
+    position:relative;
+    left:5px;
+    
+}
+#menu.active li.current-back, #menu.active li.current-parent-back { background-position:left -364px; }
+#menu.active li.current-back .left { background-position:right -184px; }
+#menu.active li.current-parent-back .left { background-position:right -229px; }
+
+#menu.active .spanbox {
+    position:absolute;
+    display:none;
+    background:url(images/pix.gif);
+    margin-top:-5px;
+    width:200px;
+}
+#menu.active div {
+    margin-top:0;
+    display:block;
+    position:relative;
+}
+#menu.active div .spanbox {
+    margin:0 0 0 -6px;
+    left:100%;
+}
+#menu.active .spanbox .spanbox { margin-top:-50px; }
+#menu.active .spanbox .spanbox div { margin:-2px 0 0 0; }
+
+/** ie7 */
+*:first-child+html #menu.active div div { top:auto; }
+*:first-child+html .menu-images-preloading { visibility:hidden; }
+
+#menu.active div.two ul.one .spanbox { margin-left:-206px; }
+#menu.active div.two ul.two .spanbox { margin-left:-6px; }
+#menu.active div.three ul.one .spanbox { margin-left:-406px; }
+#menu.active div.three ul.two .spanbox { margin-left:-206px; }
+#menu.active div.three ul.three .spanbox { margin-left:-6px; }
+#menu.active div.four ul.one .spanbox { margin-left:-606px; }
+#menu.active div.four ul.two .spanbox { margin-left:-406px; }
+#menu.active div.four ul.three .spanbox { margin-left:-206px; }
+#menu.active div.four ul.four .spanbox { margin-left:-6px; }
+#menu.active div.five ul.one .spanbox { margin-left:-806px; }
+#menu.active div.five ul.two .spanbox { margin-left:-606px; }
+#menu.active div.five ul.three .spanbox { margin-left:-406px; }
+#menu.active div.five ul.four .spanbox { margin-left:-206px; }
+#menu.active div.five ul.five .spanbox { margin-left:-6px; }
+#menu.active div.columns ul .spanbox div { margin-left:0; }
+
+.menu-images-preloading,
+.menu-images-preloading div {
+    top:0;
+    left:0;
+    width:4px;
+    height:2px;
+    opacity:0.1;
+    overflow:hidden;
+    position:absolute;
+}
+.menu-images-preloading { width:2px; }
+.menu-images-preloading .columns-png { background:url(images/columns.png) no-repeat; }
+.menu-images-preloading .subitem-png { background:url(images/subitem.png) no-repeat; }
+
+
+/* content */
+.content_resize { padding-right:0; padding-top:16px; width:930px;}
+.content .mainbar { float:left; width:630px;}
+.content .mainbar img { margin-bottom:24px; padding:4px; border:1px solid #b7b7b7; background-color:#fff;}
+.content .mainbar img.fl { float:left; margin-right:12px;}
+.content .mainbar .article, .content .sidebar .gadget { margin:0; padding:0 0 16px 0;}
+.content .sidebar { float:right; width:276px;}
+ul.sb_menu, ul.ex_menu { margin:0; padding:0; list-style:none; color:#959595;}
+ul.sb_menu li, ul.ex_menu li { margin:0; background:url(images/li.gif) no-repeat 0 12px;}
+ul.sb_menu li { padding:4px 0; border-bottom:1px solid #e3e3e3; width:220px;}
+ul.ex_menu li { padding:4px 0 8px;}
+ul.sb_menu li a, ul.ex_menu li a { color:#5f5f5f; text-decoration:none; margin-left:-16px; padding-left:16px;}
+ul.sb_menu li a:hover, ul.ex_menu li a:hover { color:#00b2e8; background:url(images/li_a.gif) no-repeat left center;}
+ul.sb_menu li a:hover { text-decoration:underline;}
+ul.ex_menu li a:hover { text-decoration:none;}
+
+/* subpages */
+.content .mainbar .comment { margin:0; padding:16px 0 0 0;}
+.content .mainbar .comment img.userpic { border:1px solid #dedede; margin:10px 16px 0 0; padding:0; float:left;}
+
+/* fbg */
+.fbg_resize { padding:24px 40px;}
+.fbg img { border:1px solid #d6d6d6;}
+.fbg .col { margin:0; float:left;}
+.fbg .c1 { padding:0 16px 0 0; width:296px;}
+.fbg .c2 { padding:0 16px; width:240px;}
+.fbg .c3 { padding:0 0 0 16px; width:290px;}
+.fbg .c1 img { margin:8px 16px 4px 0; float:left;}
+
+/* footer */
+.footer { padding:16px; background-color:#434242;}
+.footer p.lf { margin:0; padding:4px 0; float:right; width:auto; line-height:1.5em; color:#727272;}
+ul.fmenu { margin:0; padding:2px 0; list-style:none; float:left; width:auto;}
+ul.fmenu li { margin:0; padding:0 4px; float:left;}
+ul.fmenu li a { color:#727272; text-decoration:none; padding:2px 6px;}
+ul.fmenu li a:hover, ul.fmenu li.active a { color:#fff;}
+ul.fmenu li a:hover { text-decoration:underline;}
+
+/* form */
+ol { list-style:none;}
+ol li { display:block; clear:both;}
+ol li label { display:block; margin:0; padding:16px 0 0 0;}
+ol li input.text { width:480px; border:1px solid #c0c0c0; margin:2px 0; padding:5px 2px; height:16px; background:#fff;}
+ol li textarea { width:480px; border:1px solid #c0c0c0; margin:2px 0; padding:2px; background:#fff;}
+ol li .send { margin:16px 0 0 0;}
+
+
+/* start slider from here */
+
+#sliderFrame 
+{
+    position:relative;
+    width:700px;
+    margin: 0 auto; /*center-aligned*/
+}
+
+#slider, #slider div.sliderInner {
+    width:700px;height:306px;/* Must be the same size as the slider images */
+    border-radius: 12px;
+}
+
+#slider {
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+	position:relative;
+    transform: translate3d(0,0,0);
+    box-shadow: 0px 1px 5px #999999;
+}
+
+/* the link style (if an image is wrapped in a link) */
+#slider a.imgLink, #slider .video {
+	z-index:2;
+	position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+}
+#slider .video {
+	background:transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* Caption styles */
+#slider div.mc-caption-bg, #slider div.mc-caption-bg2 {
+	position:absolute;
+	width:440px;
+	height:auto;
+	padding:10px 0;/* 10px will increase the height.*/
+	left:120px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+	bottom:10px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
+	z-index:3;
+	overflow:hidden;
+	font-size: 0;
+}
+#slider div.mc-caption-bg {
+    /* NOTE: Its opacity is to be set through the sliderOptions.captionOpacity setting in the js-image-slider.js file.*/
+	background:Black;/* or any other colors such as White, or: background:none; */
+	border:1px solid white;
+	border-radius: 5px;
+}
+#slider div.mc-caption-bg2 {
+    background:none;
+}
+#slider div.mc-caption {
+	font:bold 15px Arial;
+	color:#EEE;
+	z-index:4;
+	text-align:center;
+    background:none;
+}
+#slider div.mc-caption a {
+	color:#FB0;
+}
+#slider div.mc-caption a:hover {
+	color:#DA0;
+}
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+/* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
+#slider div.navBulletsWrapper  {
+	top:320px;/* Its position is relative to the #slider */
+	text-align:center;
+	background:none;
+	position:relative;
+	z-index:5;
+}
+
+/* each bullet */
+#slider div.navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    border:1px solid #AAA;
+    background:#EEE;
+    color:#AAA;
+    font:normal 9px Arial;
+    text-align:center;
+    display:inline-block; *display:inline; zoom:1;
+    overflow:hidden;cursor:pointer;
+    margin:0 6px;/* set distance between each bullet*/
+    border-width:medium;
+    box-shadow:inset 0 0 4px #AAA;
+}
+
+#slider div.navBulletsWrapper div.active {
+    border-color:#3E99C6;
+    background:#259FDC;
+    color:White;
+}
+
+
+/* --------- Others ------- */
+
+#slider div.loading 
+{
+    width:100%; height:100%;
+    background:transparent url(images/loading.gif) no-repeat 50% 50%;
+    filter: alpha(opacity=60);
+    opacity:0.6;
+    position:absolute;
+    left:0;
+    top:0; 
+    z-index:9;
+}
+
+#slider img, #slider>b, #slider a>b {
+	position:absolute; border:none; display:none;
+}
+
+#slider div.sliderInner {
+	overflow:hidden; 
+	-webkit-transform: rotate(0.000001deg);/* fixed the Chrome not crop border-radius bug*/
+	position:absolute; top:0; left:0;
+}
+
+#slider>a, #slider video, #slider audio {display:none;}
+
+
+
+
+/*For tooltip target element that has set class="tooltip" */
+.tooltip {text-decoration: none; border-bottom:1px dotted #36c;color: #36c; outline: none; }
+
+/*For tooltip box*/
+div#mcTooltip 
+{
+    line-height:16px;
+    border-width: 1px;   
+    color:#333; 
+    border-color:#BBBBBB;
+    padding:6px 9px;
+    font-size: 12px;
+    font-family: Verdana, Arial;
+    border-radius:4px; /*Rounded corners. N/A for IE 8 and below.*/
+    box-shadow: 0 1px 6px #AAAAAA; /*Drop shadow. N/A for IE 8 and below.*/
+}
+
+div#mcTooltip, div.mcTooltipInner 
+{
+    background-color:#EAECF0;
+}
+
+/* For hyperlink within tooltip */
+div#mcTooltip a { color:#36c; }
+
+/*Close button. Available when sticky or overlay has been set to true, or is on iPhone, iPad, Android, BlackBerry, or IEMobile devices. */
+div#mcttCloseButton 
+{
+    width:14px;height:14px;position:absolute;background-image:url(images/closeBtn.gif);cursor:pointer; overflow:hidden;
+    top:12px; right:12px; left:auto;
+}            
+
+/* Only applies when overlay has been set to true or 1 */
+div#mcOverlay 
+{
+    background-color: white;
+    opacity:0.8; filter: alpha(opacity=80); 
+    display:none;top:0;left:0;width:100%;height: 100%;overflow:visible;z-index:4; 
+}
+
+/*Only available when calling by tooltip.ajax(...). It will be a spinning image indicating a request is in progress.*/
+div#tooltipAjaxSpin {margin:20px 50px; background:transparent url(images/loading.gif) no-repeat center center; width:50px; height:30px; font-size:0;}
+
+/*The settings below should remain unchanged*/
+div#mcTooltipWrapper {position:absolute;visibility:hidden;overflow:visible;z-index:9999999999;top:0px;}
+div#mcTooltip {float:left;border-style:solid;position:relative;overflow:hidden;}
+div.mcTooltipInner {float:left;position:relative;width:auto;height:auto;}
+div#mcttCo {position:absolute;text-align:left;}
+div#mcttCo em, div#mcttCo b {display:block; width:0; height:0;overflow:hidden;}
+
+/*workable with bootstrap*/
+div#mcTooltip, div#mcTooltip div {
+     -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+     box-sizing:content-box;
+}
+
+
+/*end slider here*/
+#about_img{float:left;margin:10px 0 0 10px;width:270px;}
+
+
+
+
+
+.FieldCaptionTD{ font-weight: bold; font-family:Verdana; color: #000000;   font-size: 8pt; text-align: left;
+}
+
+.FieldCaptionColorTD{ font-weight: bold; border: solid 1 #698BB7; font-family:Verdana; font-size: 8pt;}
+
+.TextinputNum{color:darkblue;	border:solid 1 black; text-align:right;  font-size:8pt; font-family:Verdana; }
+
+.TextinputText{color:darkblue;	border:solid 1 black; text-align:left;  font-size:8pt; font-family:Verdana; }
+
+.TextinputTextWB{color:darkblue; text-align:left;  font-size:8pt; font-family:Verdana; }
+
+.LblSuccess
+{
+    color: navy;
+    font-size: 9pt;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+.LblError
+{
+    color: red;
+    font-size: 9pt;
+    font-family: Verdana;
+    font-weight: bold;
+}
+.Label{font-size:8pt; font-family:Verdana;}
+
+.FormHeaderFont{ background-image: url(image/formheader.jpg); font-size: 11pt; font-family:Verdana; font-weight: bold; text-align:right;}
+
+.TestFormHeaderFont{ background-image: url(image/formheader.jpg); font-size: 10pt; font-family:Verdana; font-weight: bold; text-align:center; color:White }
+
+.ButtonTD{ color: white; background-color:8cba10;font-size: 9pt; font-family:Verdana; border:solid 1px #B3CAE1; text-align:right; }
+
+.Button{ color: #000080; background-color:#afb7cf;font-size: 9pt; font-family:Verdana; border:solid 1px #B3CAE1;}
+
+.Dropdownbox {	color:darkBlue;font-size:8pt;	font-family:Verdana; }
+
+.Radiobuttonlist {color:darkblue;	font-size:8pt; 	font-family:Verdana; }
+
+.Checkboxlist{color:darkBlue;  height:2px; font-size:8pt;font-family:Verdana;}
+
+.Checkbox{color:darkBlue; font-size:8pt;font-family:Verdana;}
+
+.DataGridHeaderFont{ color: white; font-size: 9pt; font-weight: bold; background-color:#1010ad; font-weight:bold; font-family:Verdana;}
+
+.DataGridFooterFont{ color: white; font-size: 8pt; font-weight: bold; background-color:#1010ad; font-weight:bold; font-family:Verdana;}
+
+.DataGridBody
+{
+	border-right: white 1px solid;
+	border-top: white 1px solid;
+	font-size: 8pt;
+	border-left: white 1px solid;
+	color: black;
+	border-bottom: white 1px solid;
+	font-family: Verdana;
+	background-color: white;	
+}
+
+.LinkButton{color:darkBlue; font-size:8pt; font-family:Verdana; font-weight:bold;}
+
+.Frame{color:darkBlue;}
+
+.FieldCaptionTDRep{ font-weight: bold; border: solid 1 #698BB7; font-family:Verdana; color: #000000;   font-size: 9pt; }
+.FieldCaptionTDHead{ font-weight: bold; font-family:Verdana; color: #000000;   font-size: 7pt; }
+.FieldCaptionTDDetails{ font-family:Verdana; color: #000000;   font-size: 7pt; }
+.ReadingQText{ font-family:Verdana; color: #000000;   font-size: 10pt; }
+
+.DataGridSElectedStyle{color: black; font-size: 8pt; background-color:f7efd6; font-weight:bold; font-family:Verdana;}
+.TotalLabel{color: navy; font-size: 10pt; background-color: white; font-weight:bold; font-family:Verdana;}
+
+.Tracker{ font-family:Verdana; color: #0804a5;   font-size: 9pt; }
+
+
+/*picture zoom*/
+.dg-picture-zoom{
+	cursor : url(http://www.dhtmlgoodies.com/scripts/picture-zoom/cursors/magnify-plus.cur), pointer !important;
+}
+.dg-picture-zoom-large{
+	cursor : url(http://www.dhtmlgoodies.com/scripts/picture-zoom/cursors/magnify-minus.cur), pointer !important;
+
+}
+
+.dg-picture-zoom-border-container{
+    border : 2px solid #FFF;
+    background-color: #FFF;
+    margin-left:-7px;
+    margin-top:-7px;
+    padding:7px;
+    box-shadow:10px 10px 20px #000000;
+    border-radius: 5px;
+
+
+}
+/*end picture zoom*/
